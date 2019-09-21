@@ -1,0 +1,56 @@
+<!-- <section class="home">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let tienda of tiendas">
+                <div class="card-menus">
+                    <div class="card">
+                        <form formReister="ngForm">
+                            <div class="card-header bg-dark text-white de-flex justify-content-between align-items-center">
+                                <h1>{{tienda.titulo}}</h1>
+                            </div>
+                            <img src="{{tienda.imagen}}" class="card-img-top">
+                            <div class="card-body">
+                                <p>{{tienda.descripcion}}</p>
+                            </div>
+                            <div class="card-footer">
+                                <a routerLink="/productoTienda" class="btn btn-info btn-block">ver</a>
+                                <h5>{{tienda.precio}} $ </h5>
+                                <button class="btn btn-primary btn-block" (click)="comprar(tienda.id)">Comprar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<section class="register">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4 mx-auto">
+                <div class="card-register">
+                    <div class="card">
+                        <div class="card-header text-center">
+                            <h1 class="h3 mb-3 font-weigth-normal">Pagar</h1>
+                        </div>
+                        <div class="card-body text-center">
+                            <form formReister="ngForm" (ngSubmit)="pagar()">
+                                <div class="form-group">
+                                    <input type="number" [(ngModel)]="pago.egresos" name="egresos" id="egresos" class="form-control" placeholder="monto a pagar" required>
+                                </div>
+                                <div class="form-group">
+                                    <textarea name="detalle" [(ngModel)]="pago.detalle" id="detalle" cols="30" rows="10" placeholder="detalle del pago" required></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <input type="date" [(ngModel)]="pago.fecha" name="fecha" id="fehca" class="form-control" required>
+                                </div>
+                                <button type="submit" class="btn btn-lg btn-primary btn-block">pagar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
