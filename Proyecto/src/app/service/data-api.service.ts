@@ -1,4 +1,3 @@
-////------ este servivio es para el menu y contenido -----/////
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
@@ -29,10 +28,14 @@ export class DataApiService {
     const url_api ='http://localhost:3000/api/tienda/id';
     return (this.menu = this.http.get(url_api));
   }
-
-  pagar(pagosInterface:pagosInterface){
+  pagos(pagosInterface:pagosInterface){
     const url_api = "";
-    return this.http.post('http://localhost:3000/api/tienda',pagosInterface)
+    return this.http.post('http://localhost:3000/api/pagos',pagosInterface)
+  }
+
+  pagar(){
+    const url_api = "";
+    return this.http.get('http://localhost:3000/api/tienda')
   }
 
   // getPrecios(){

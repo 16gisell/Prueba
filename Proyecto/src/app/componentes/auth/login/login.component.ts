@@ -13,12 +13,8 @@ export class LoginComponent implements OnInit {
   constructor(private authService: AuthService, private router:Router) { }
 
   private user: userInterface={
-    //username: "",
-    //name:"",
-    //lastname:"",
-    email: "",
+    nombre: "",
     password: "",
-   // phone: "",
   }
 
   ngOnInit() {
@@ -27,14 +23,14 @@ export class LoginComponent implements OnInit {
   onLogin(){
     return this.authService
     .loginUser(
-      this.user.email, 
+      this.user.nombre, 
       this.user.password
       )
       .subscribe(data =>{
         console.log(data);//muestra los datos del usuario
-        this.authService.setUser(data.user)
-        let Lotoken = data.id;
-        this.authService.setToken(Lotoken);
+        // this.authService.setUser(data.user)
+        // let Lotoken = data.id;
+        // this.authService.setToken(Lotoken);
         this.router.navigate[('/auth/home')];
       },
       error => console.log(error)

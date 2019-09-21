@@ -18,10 +18,6 @@ export class HomeComponent implements OnInit {
     egresos: 0,
     cantidadTotal: 0,
     monto:0,
-    descripcion:'',
-    descripcionDos:'',
-    imagen:'',
-    precio:0,
   }
 
   constructor(private dataApi: DataApiService, private authService: AuthService) { }
@@ -45,10 +41,6 @@ export class HomeComponent implements OnInit {
     delete this.pago.id;
     delete this.pago.cantidadTotal;
     delete this.pago.monto;
-    delete this.pago.descripcion;
-    delete this.pago.descripcionDos;
-    delete this.pago.imagen;
-    delete this.pago.precio;
 
     this.dataApi.pagar(this.pago).subscribe(
       resp=>{

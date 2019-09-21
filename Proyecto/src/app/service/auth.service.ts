@@ -1,8 +1,3 @@
-/*para no pasar todo el body content en la funcion se crea una 
-  carpeta llamada models donde se guardan las inteface, 
-  lo cual esta contiene los parametros que pide la base de datos.*/
-
-
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
